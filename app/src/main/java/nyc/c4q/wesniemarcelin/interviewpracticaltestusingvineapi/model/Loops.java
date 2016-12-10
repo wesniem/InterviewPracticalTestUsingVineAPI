@@ -17,4 +17,28 @@ public class Loops {
     @SerializedName("onFire")
     @Expose
     public int onFire;
+
+    public float getCount() {
+        return count;
+    }
+
+    public void setCount(float count) {
+        this.count = count;
+    }
+
+    public float getVelocity() {
+        return velocity;
+    }
+
+    public void setVelocity(float velocity) {
+        this.velocity = velocity;
+    }
+
+    public int getOnFire() {
+        return onFire;
+    }
+
+    public void setOnFire(int onFire) {
+        this.onFire = onFire;
+    }
 }

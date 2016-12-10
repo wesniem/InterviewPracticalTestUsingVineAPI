@@ -11,4 +11,12 @@ public class User_ {
     @SerializedName("private")
     @Expose
     public int _private;
+
+    public int get_private() {
+        return _private;
+    }
+
+    public void set_private(int _private) {
+        this._private = _private;
+    }
 }

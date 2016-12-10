@@ -19,7 +19,7 @@ public class AudioTrack {
     public Object deleted;
     @SerializedName("trackId")
     @Expose
-    public int trackId;
+    public String trackId;
     @SerializedName("modified")
     @Expose
     public Object modified;
@@ -37,7 +37,7 @@ public class AudioTrack {
     public int snapToBeat;
     @SerializedName("linkId")
     @Expose
-    public int linkId;
+    public String linkId;
     @SerializedName("duration")
     @Expose
     public float duration;
@@ -47,4 +47,108 @@ public class AudioTrack {
     @SerializedName("videoOffset")
     @Expose
     public float videoOffset;
+
+    public String getOrigin() {
+        return origin;
+    }
+
+    public void setOrigin(String origin) {
+        this.origin = origin;
+    }
+
+    public String getCreated() {
+        return created;
+    }
+
+    public void setCreated(String created) {
+        this.created = created;
+    }
+
+    public Object getDeleted() {
+        return deleted;
+    }
+
+    public void setDeleted(Object deleted) {
+        this.deleted = deleted;
+    }
+
+    public String getTrackId() {
+        return trackId;
+    }
+
+    public void setTrackId(String trackId) {
+        this.trackId = trackId;
+    }
+
+    public Object getModified() {
+        return modified;
+    }
+
+    public void setModified(Object modified) {
+        this.modified = modified;
+    }
+
+    public int getNumberOfMeasures() {
+        return numberOfMeasures;
+    }
+
+    public void setNumberOfMeasures(int numberOfMeasures) {
+        this.numberOfMeasures = numberOfMeasures;
+    }
+
+    public Track getTrack() {
+        return track;
+    }
+
+    public void setTrack(Track track) {
+        this.track = track;
+    }
+
+    public float getAudioOffset() {
+        return audioOffset;
+    }
+
+    public void setAudioOffset(float audioOffset) {
+        this.audioOffset = audioOffset;
+    }
+
+    public int getSnapToBeat() {
+        return snapToBeat;
+    }
+
+    public void setSnapToBeat(int snapToBeat) {
+        this.snapToBeat = snapToBeat;
+    }
+
+    public String getLinkId() {
+        return linkId;
+    }
+
+    public void setLinkId(String linkId) {
+        this.linkId = linkId;
+    }
+
+    public float getDuration() {
+        return duration;
+    }
+
+    public void setDuration(float duration) {
+        this.duration = duration;
+    }
+
+    public int getAverageBpm() {
+        return averageBpm;
+    }
+
+    public void setAverageBpm(int averageBpm) {
+        this.averageBpm = averageBpm;
+    }
+
+    public float getVideoOffset() {
+        return videoOffset;
+    }
+
+    public void setVideoOffset(float videoOffset) {
+        this.videoOffset = videoOffset;
+    }
 }

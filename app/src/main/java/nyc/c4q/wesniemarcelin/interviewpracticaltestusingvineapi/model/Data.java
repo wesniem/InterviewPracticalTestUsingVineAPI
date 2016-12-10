@@ -27,11 +27,75 @@ public class Data {
     public String backAnchor;
     @SerializedName("anchor")
     @Expose
-    public int anchor;
+    public String anchor;
     @SerializedName("nextPage")
     @Expose
     public int nextPage;
     @SerializedName("size")
     @Expose
     public int size;
+
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
+    }
+
+    public String getAnchorStr() {
+        return anchorStr;
+    }
+
+    public void setAnchorStr(String anchorStr) {
+        this.anchorStr = anchorStr;
+    }
+
+    public List<Record> getRecords() {
+        return records;
+    }
+
+    public void setRecords(List<Record> records) {
+        this.records = records;
+    }
+
+    public Object getPreviousPage() {
+        return previousPage;
+    }
+
+    public void setPreviousPage(Object previousPage) {
+        this.previousPage = previousPage;
+    }
+
+    public String getBackAnchor() {
+        return backAnchor;
+    }
+
+    public void setBackAnchor(String backAnchor) {
+        this.backAnchor = backAnchor;
+    }
+
+    public String getAnchor() {
+        return anchor;
+    }
+
+    public void setAnchor(String anchor) {
+        this.anchor = anchor;
+    }
+
+    public int getNextPage() {
+        return nextPage;
+    }
+
+    public void setNextPage(int nextPage) {
+        this.nextPage = nextPage;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
 }

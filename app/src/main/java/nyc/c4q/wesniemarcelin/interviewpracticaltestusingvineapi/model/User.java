@@ -24,11 +24,67 @@ public class User {
     public String avatarUrl;
     @SerializedName("userId")
     @Expose
-    public int userId;
+    public String userId;
     @SerializedName("private")
     @Expose
     public int _private;
     @SerializedName("location")
     @Expose
     public String location;
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public int getVerified() {
+        return verified;
+    }
+
+    public void setVerified(int verified) {
+        this.verified = verified;
+    }
+
+    public List<String> getVanityUrls() {
+        return vanityUrls;
+    }
+
+    public void setVanityUrls(List<String> vanityUrls) {
+        this.vanityUrls = vanityUrls;
+    }
+
+    public String getAvatarUrl() {
+        return avatarUrl;
+    }
+
+    public void setAvatarUrl(String avatarUrl) {
+        this.avatarUrl = avatarUrl;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public int get_private() {
+        return _private;
+    }
+
+    public void set_private(int _private) {
+        this._private = _private;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
 }
