@@ -1,5 +1,6 @@
 package nyc.c4q.wesniemarcelin.interviewpracticaltestusingvineapi;
 
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -25,20 +26,20 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class VineFragment extends Fragment {
-    private static final String BASE_URL = "https://vine.co/api/" ;
+    private static final String BASE_URL = "https://vine.co/" ;
     private static final String TAG ="YOOOOO" ;
     RecyclerView recordRView;
     RecordAdapter recordAdapter;
-    List<Record> recordList = new ArrayList<>();
+    List<Record> recordList;
+
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View mroot = inflater.inflate(R.layout.activity_vine_fragment, container, false);
-
         //Identify the recyclerView and pass it through the fragment
         recordRView = (RecyclerView) mroot.findViewById(R.id.fragment_rv);
-        recordRView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
         //Make retrofit call before you return the view thats supposed to show to the user
         fetchRecordListCall();
+
         return mroot;
     }
 
@@ -64,19 +65,19 @@ public class VineFragment extends Fragment {
 
                 //Create variable for response
                 VineResponse vineResponse = response.body();
-                Record record = (Record) vineResponse.getData().getRecords();
                 recordList = vineResponse.getData().getRecords();
 
-                Log.d("POJO", "POJOs have downloaded: ");
+                Log.d("POJO", "POJOs: " + recordList.get(0).getLiked());
 
 
                 Log.d("success", "in there");
+                recordRView.setLayoutManager(new LinearLayoutManager(getContext()));
                 //Call Adapter from before.... needed next(put arraylist into it
-                recordAdapter = new RecordAdapter((ArrayList) recordList);
+                recordAdapter = new RecordAdapter(recordList);
                 //Set the adapter to the recyclerView
                 recordRView.setAdapter(recordAdapter);
                 Log.d("Adapter", "adapter attached");
-                recordAdapter.notifyDataSetChanged();
+                //recordAdapter.notifyDataSetChanged();
 
             }
 

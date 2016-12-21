@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import nyc.c4q.wesniemarcelin.interviewpracticaltestusingvineapi.R;
 import nyc.c4q.wesniemarcelin.interviewpracticaltestusingvineapi.model.Record;
@@ -15,9 +16,9 @@ import nyc.c4q.wesniemarcelin.interviewpracticaltestusingvineapi.model.Record;
  */
 
 public class RecordAdapter extends RecyclerView.Adapter<RecordViewHolder> {
-    private ArrayList<Record> recordList = new ArrayList();
+    private List<Record> recordList;
 
-    public RecordAdapter(ArrayList recordList) {
+    public RecordAdapter(List<Record> recordList) {
         this.recordList = recordList;
     }
 
